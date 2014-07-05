@@ -7,7 +7,7 @@ import play.api.Play.current
 object Application extends Controller {
 
   def index = Action {
-    Ok(views.html.index)
+    Ok(views.html.index())
   }
 
   def echoSocket = WebSocket.acceptWithActor[String, String] { request => out =>
